@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/swiper.min.css">
+	<title>Movie Search by Andrei Medvedev</title>
+</head>
+
+<body class="body">
+
+	<header class="header">
+		<h1>Movie Search</h1>
+	</header>
+
+	<main class="main__container">
+
+		<form class="search" autocomplete="off">
+			<div class="wrapper">
+				<button type="button" class="keyboard" id="KEYBOARD"></button>
+				<input class="search__field" placeholder="Search Movie" autofocus="">
+				<p class="clean__field">╳</p>
+				<input type="submit" class="search__submit" value="Search">
+				<div class="lds-ring">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="result__wrapper">
+				<div class="search__result"></div>
+			</div>
+		</form>
+
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+
+	</main>
+
+	<footer class="footer">
+		<p class="copyright">RS School 2020q1</p>
+		<span class="github-link">
+			<a href="https://github.com/AndreiMedvedevSaratov">
+				<img src="./assets/images/GitHubPicture.svg" width="30" height="30" alt="github-icon"></a>
+			<a href="https://github.com/AndreiMedvedevSaratov">Andrei Medvedev</a>
+		</span>
+	</footer>
+
+	<script src="./js/script_index.js" type="module"></script>
+	<script src="./js/swiper.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+/* ----- Normalize ----- */
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    background-color: rgba(23, 161, 241, 0.075);
+}
+/* ----- Main area ----- */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65px;
+    min-height: 65px;
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.5);
+    user-select: none;
+    background: linear-gradient(to right, #fd1a15 0, #fc8b34 30%, #7fd03e 70%, #007177 100%) 0 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 26px;
+    color: white;
+}
+.main__container {
+    display: block;
+    height: calc(100% - 145px);
+    margin-top: 30px;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    padding: 0 10%;
+    color: #008b8b;
+    box-shadow: 0 -15px 15px 0 rgba(0, 0, 0, 0.5);
+    user-select: none;
+    background: linear-gradient(to right, #fd1a15 0, #fc8b34 30%, #7fd03e 70%, #007177 100%) 0 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 26px;
+    color: white;
+}
+.github-link {
+    cursor: pointer;
+}
+/* ----- Search field ----- */
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.search__field {
+    position: relative;
+    width: 50%;
+    height: 45px;
+    padding: 5px 5px 5px 5px;
+    outline: none;
+    border: none;
+    border-radius: 15px 15px 15px 15px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.clean__field {
+    position: relative;
+    top: 0;
+    left: -30px;
+    user-select: none;
+    color: grey;
+    cursor: pointer;
+}
+.search__submit {
+    width: 90px;
+    height: 45px;
+    position: relative;
+    left: -10px;
+    outline: none;
+    border: none;
+    border-radius: 15px 15px 15px 15px;
+    background: linear-gradient(to right, #fd1a15 0, #fc8b34 30%, #7fd03e 70%, #007177 100%) 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s;
+    color: white;
+    font-weight: bolder;
+}
+.search__submit:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #fd1a15 0, #fc8b34 30%, #7fd03e 70%, #007177 100%) 0 0;
+}
+.search__submit:active {
+    cursor: pointer;
+    transform: translate(4px, 4px);
+    transition: all 0.1s ease 0s;
+}
+.search.result__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.search__result {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin: 20px 0;
+    user-select: none;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 20px;
+}
+/* ----- Keyboard ----- */
+.keyboard {
+    width: 90px;
+    height: 45px;
+    position: relative;
+    left: -10px;
+    outline: none;
+    border: none;
+    border-radius: 15px 15px 15px 15px;
+    background: linear-gradient(to right, #fd1a15 0, #fc8b34 30%, #7fd03e 70%, #007177 100%) 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s;
+    color: white;
+    font-weight: bolder;
+    background-image: url(../assets/images/keyboard.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+.keyboard:hover {
+    cursor: pointer;
+}
+.keyboard:active {
+    cursor: pointer;
+    transform: translate(4px, 4px);
+    transition: all 0.1s ease 0s;
+}
+/* ----- CSS Loader ----- */
+.lds-ring {
+    padding-top: 5px;
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    visibility: hidden;
+}
+.lds-ring.active {
+    visibility: visible;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin: 8px;
+    border: 8px solid #14143f;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #14143f transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ----- Slider ----- */
+.swiper-container {
+    width: 90%;
+    height: 590px;
+    padding: 15px 50px;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+.swiper-wrapper {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+/* ----- Slider card----- */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 300px !important;
+    height: 550px !important;
+    max-height: 550px;
+    background: #14143f;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 10px rgba(255, 0, 128, 0.5);
+}
+.card .card__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    max-height: 50px;
+    color: rgb(255, 0, 128);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.card .card__header a {
+    max-height: 50px;
+    text-align: center;
+    padding: 0 5px;
+    color: inherit;
+    cursor: pointer;
+}
+.card .card__body {
+    width: 100%;
+    height: 450px;
+    max-height: 450px;
+    background: url(../assets/images/no-poster.jpg) center;
+}
+.card .card__body .poster {
+    height: 100%;
+    background-size: cover;
+}
+.card .card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+    max-height: 50px;
+    line-height: 1em;
+    color: rgb(255, 0, 128);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.card .star {
+    color: gold;
+    font-size: 30px;
+}
+.swiper-pagination {
+    font-size: 18px;
+    font-weight: bolder;
+}
+/* ----- Keyboard styles ----- */
+.keyboardMainArea {
+    display: none;
+}
+.keyboardMainArea.active {
+    display: block;
+    background-color: rgb(55, 223, 55);
+    position: absolute;
+    top: 180px;
+    left: 150px;
+    z-index: 1;
+}
+.Main_Area_Row {
+    display: flex;
+    margin-bottom: 10px;
+}
+.Main_Area_Row:last-child {
+    margin-bottom: 0;
+}
+.Key {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background: #3a424e;
+    border-radius: 1px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0.4em 0.4em 5px black;
+    font-weight: bold;
+    font-family: Arial;
+    color: white;
+}
+.Key:last-child {
+    margin-right: 0;
+}
+.Key:hover {
+    background: linear-gradient(#e0dd18, #b12222);
+    cursor: pointer;
+}
+.Backspace {
+    width: 133px;
+    background: #1c232e;
+}
+.Tab {
+    width: 65px;
+    background: #1c232e;
+}
+.Delete {
+    width: 58px;
+    background: #1c232e;
+}
+.CapsLock {
+    width: 133px;
+    background: #1c232e;
+}
+.Enter {
+    width: 110px;
+    background: #1c232e;
+}
+.ShiftLeft {
+    width: 133px;
+    background: #1c232e;
+}
+.ShiftRight {
+    background: #1c232e;
+}
+.Control {
+    width: 84px;
+    background: #1c232e;
+}
+.Windows {
+    background: navy;
+}
+.Alt {
+    background: #1c232e;
+}
+.Space {
+    width: 367px;
+    background: #1c232e;
+}
+.Arrow {
+    background: #1c232e;
+}
+.Button_Pressed {
+    background: linear-gradient(#e0dd18, #b12222);
+    transform: translate(4px, 4px);
+    transition: all 0.1s ease 0s;
+}
+.Paragraph {
+    margin-top: 50px;
+    font-weight: bold;
+    font-family: Arial;
+}
+/* ----- Work with different screen width ----- */
+@media (min-width: 1441px) and (max-width: 30000px) {
+    .header {
+        position: relative;
+        margin: 0px auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+    .header {
+        position: relative;
+        margin: 0px auto;
+    }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+    .keyboardMainArea.active {
+        left: 0px;
+    }
+}
+@media (min-width: 768px) and (max-width: 899px) {
+    .keyboard {
+        display: none;
+    }
+}
+@media (min-width: 426px) and (max-width: 767px) {
+    .main__container {
+        height: 740px;
+    }
+    .header {
+        font-size: 20px;
+    }
+    .footer {
+        font-size: 20px;
+        padding: 0 1%;
+    }
+    .keyboard {
+        display: none;
+    }
+}
+@media (min-width: 100px) and (max-width: 425px) {
+    .main__container {
+        height: 740px;
+    }
+    .header {
+        font-size: 16px;
+    }
+    .footer {
+        font-size: 16px;
+        padding: 0 1%;
+    }
+    .swiper-pagination {
+        display: none;
+        opacity: 0;
+    }
+    .swiper-button-prev {
+        display: none;
+        opacity: 0;
+    }
+    .swiper-button-next {
+        display: none;
+        opacity: 0;
+    }
+    .keyboard {
+        display: none;
+    }
+}
