@@ -1,4 +1,4 @@
-# Movie__Search
+## Movie__Search
 
 This project was created with JS.
 
@@ -18,6 +18,6 @@ Movie__Search
 
 andreimedvedevsaratov-RS2020Q1
 
-## https://andreimedvedevsaratov-movie-search.netlify.app/  - Welcome to search movies in Russian and English language ))))
+# https://andreimedvedevsaratov-movie-search.netlify.app/  - Welcome to search movies in Russian and English language ))))
 
-## https://github.com/AndreiMedvedevSaratov/Movie-Search/
+# https://github.com/AndreiMedvedevSaratov/Movie-Search/
