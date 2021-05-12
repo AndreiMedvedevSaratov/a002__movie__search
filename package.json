@@ -5,7 +5,7 @@
   "main": "script_index.js",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "swiper": "^5.3.8",
+    "swiper": "^6.5.1",
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
