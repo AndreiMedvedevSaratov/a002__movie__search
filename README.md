@@ -1,4 +1,4 @@
-## Movie__Search
+## a002__movie__search
 
 This project was created with JS.
 
@@ -7,6 +7,8 @@ Very interesting solution and design )) Enjoy
 Status of project: Done!
 
 Deploy: https://andreimedvedevsaratov-movie-search.netlify.app/
+
+Technolody: JS
 
 For any additional information, feel free to contact with me by:
 Tel: +7-917-215-19-68
